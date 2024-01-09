@@ -1,0 +1,78 @@
+git config —global user.name “jayesth-cpu”
+
+git config —global user.email “jayesthofficial@gmail.com”
+
+git config —list
+
+the above will show the entered credentials
+ basic git commands 
+
+1. clone: this command is used to clone a repo on our local machine(pc, laptop) git clone <link>
+2. status: displays the status of our code untracked : new files that git dosent yet track modified: changed staged: file is ready to be committed unmodified: unchanged 
+3. add : adds new changed file in your working directory git add <file name> or git add .
+4. commit : it is the record of change git commit -m “some meaningful message”
+5. push: upload local committed repo content to the remote repo(github) git push origin main
+git log : used to get a log of all commits made
+
+
+
+Init Command
+
+init : it is used to create a new repo
+
+git init
+git remote add origin < repo link >     
+git remote -v                                     (used to verify the repo)
+git branch                                          ( by default it will show master we’ll have to change it to main)
+git branch -M main                           (this is used to change the name)
+git push origin main                          (initially you can use git push -u origin main and then afterwards you’ll have to use git push)
+
+
+Branch Command 
+
+git branch                              (to check which branch you are in)
+git branch -M main               (to rename a branch)
+git checkout <branch name>        (to navigate to a different branch)
+git checkout -b <new branch name>   ( to create a new branch)
+git branch -d <branch name>               (to delete a branch, you won’t be able to delete a branch if you’re already into that branch)
+
+
+Merging Code
+git diff <branch name(different from which you’re currently in)>              (this is used to compare the differences between the two branches)
+git merge <branch name>                  (this is used to merge two branches)
+
+
+
+Another way of merging a branch is through github by creating pull requests.
+
+After merging the branches, changes will get reflected on the github itself but won’t reflect on the local repo it will be visible only on the remote repo. 
+Therefore to fetch and download content from a remote repo and immediately update the local repo to match that content we use 
+
+Pull Command
+ git pull origin main
+
+
+Merge conflicts can arise when in two different braches two different changes have been done at the same point.  
+
+
+Undoing Changes 
+
+Case 1: staged changes 
+git reset <file name>
+git reset                        (this will be used to reset changes in all files)
+
+
+Case 2: committed changes
+git reset HEAD~1 
+
+from git log we can see the hash of the previous commits made
+ so we can write  -      git reset <hash>    to directly jump to that particular commit      (this will remove changes from the git)
+
+git reset —hard <hash>        (this command will remove the changes from vs code as well)
+
+
+
+
+Fork 
+a fork is a new repo that shares code and visibility settings with the original main repo. It is like a rough copy.
+No there
